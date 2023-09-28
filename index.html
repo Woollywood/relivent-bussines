@@ -664,7 +664,7 @@
 					<button class="tabs__tab-btn" data-tab-id="about">Application</button>
 				</div>
 
-				<div data-tab="home" class="tabs__tab">
+				<form data-tab="home" class="tabs__tab" method="post" action="#" data-dev>
 					<div class="st_wrap flex">
 						<div class="form">
 							<div class="field">
@@ -676,29 +676,30 @@
 									id="phone"
 									name="phone"
 									autofocus="true"
-									placeholder="Phone Number" />
+									placeholder="Phone Number"
+									data-required />
 							</div>
 						</div>
 					</div>
 					<div class="input__wrap">
 						<div class="label__title">Email:</div>
-						<input type="email" placeholder="Email address" />
+						<input type="email" placeholder="Email address" data-required="email" />
 					</div>
-					<button class="btn__get">
+					<button class="btn__get" type="submit">
 						<span>GET IN TOUCH</span>
 						<img src="images/arrow-circle-right.svg" alt="" />
 					</button>
 
 					<div class="get__title">By sending this message you automatically agree to the privacy policy</div>
-				</div>
+				</form>
 
-				<div data-tab="about" class="tabs__tab">
+				<form data-tab="about" class="tabs__tab" action="#" method="post" data-dev>
 					<div class="input__wrap">
 						<div class="label__title">Email:</div>
 						<input type="email" placeholder="Email address" />
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Type of company:</p>
 						<select name="box-1" id="">
 							<option value="0">Choose a type</option>
@@ -709,7 +710,7 @@
 						</select>
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Average attendance:</p>
 						<select name="box-1" id="">
 							<option value="0">Choose number of events</option>
@@ -720,7 +721,7 @@
 						</select>
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Average number of events per month</p>
 						<select name="box-1" id="">
 							<option value="0">Choose number of events</option>
@@ -730,13 +731,12 @@
 							<option value="4">More 100</option>
 						</select>
 					</div>
-					<button class="btn__get">
+					<button class="btn__get" type="submit">
 						<span>GET IN TOUCH</span>
 						<img src="images/arrow-circle-right.svg" alt="" />
 					</button>
-
 					<div class="get__title">By sending this message you automatically agree to the privacy policy</div>
-				</div>
+				</form>
 			</div>
 		</section>
 
@@ -810,6 +810,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/slider.js"></script>
+		<script src="js/forms.js"></script>
 		<script src="slick/slick.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
