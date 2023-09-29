@@ -673,7 +673,7 @@
 								<div class="label__title label__title3">Phone Number:</div>
 								<input
 									type="text"
-									id="phone"
+									class="phone-country"
 									name="phone"
 									autofocus="true"
 									placeholder="Phone Number"
@@ -694,6 +694,22 @@
 				</form>
 
 				<form data-tab="about" class="tabs__tab" action="#" method="post" data-dev>
+					<div class="st_wrap flex">
+						<div class="form">
+							<div class="field">
+								<div class="label__title label__title2">Code country</div>
+
+								<div class="label__title label__title3">Phone Number:</div>
+								<input
+									type="text"
+									class="phone-country"
+									name="phone"
+									autofocus="true"
+									placeholder="Phone Number"
+									data-required />
+							</div>
+						</div>
+					</div>
 					<div class="input__wrap">
 						<div class="label__title">Email:</div>
 						<input type="email" placeholder="Email address" />
@@ -818,7 +834,7 @@
 		<script src="js/phonecode.js"></script>
 		<script>
 			$(function () {
-				$('#phone').phonecode({
+				$('.phone-country').phonecode({
 					preferCo: 'ru',
 				});
 			});
