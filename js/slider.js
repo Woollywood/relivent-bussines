@@ -25,9 +25,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	});
 
 	let prependSlideIndex = slider.querySelectorAll('[data-slide]').length - 1;
-	let sliderIndexAppend = 0;
 
-
+	
 	let sliderBody = slider.querySelector('.top-slider__body');
 	slider.addEventListener('mousemove', (e) => {
 		if (isScroll) {
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			prevMoveX = e.clientX;
 
 			scrollDirection ? sliderBody.scrollLeft++ : sliderBody.scrollLeft--;
-			sliderIndexAppend--;
 
 			if (sliderBody.scrollLeft === 0) {
 				addSlidePrev(slider, prependSlideIndex--);
@@ -72,6 +70,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 	const DELAY = 60;
 
+	let sliderIndexAppend = 0;
 	setTimeout(function animate() {
 		sliderBody.scrollLeft++;
 
