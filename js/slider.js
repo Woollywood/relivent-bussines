@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	window.addEventListener('resize', (e) => {
 		sliderCount = getSliderCount(window.innerWidth);
 	});
+	slidesDuplicate(slider);
 	sliderInit(slider, sliderCount, 10);
 	window.addEventListener('resize', (e) => {
 		sliderInit(slider, sliderCount, 10);
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 	let prependSlideIndex = slider.querySelectorAll('[data-slide]').length - 1;
 
-	
 	let sliderBody = slider.querySelector('.top-slider__body');
 	slider.addEventListener('mousemove', (e) => {
 		if (isScroll) {
@@ -95,6 +95,7 @@ function moveSlideToTheEnd(slider, slideIndex) {
 	let slide = slider.querySelector(`[data-slide-id="${slideIndex}"]`);
 	sliderBody.append(slide);
 	sliderBody.scrollLeft -= slide.clientWidth + parseInt(getComputedStyle(slide).marginLeft);
+	styleUpdate(slider, 10);
 }
 
 function addSlidePrev(slider, slideIndex) {
@@ -102,6 +103,14 @@ function addSlidePrev(slider, slideIndex) {
 	let slide = slider.querySelector(`[data-slide-id="${slideIndex}"]`);
 	sliderBody.prepend(slide);
 	sliderBody.scrollLeft += slide.clientWidth + parseInt(getComputedStyle(slide).marginLeft);
+	styleUpdate(slider, 10);
+}
+
+function styleUpdate(slider, spaceBetween) {
+	let slides = slider.querySelectorAll('[data-slide]');
+	slides.forEach((slide, index) =>
+		index >= 1 ? (slide.style.marginLeft = `${spaceBetween}px`) : (slide.style.marginLeft = '')
+	);
 }
 
 function getSliderCount(windowWidth) {
@@ -116,6 +125,13 @@ function getSliderCount(windowWidth) {
 	} else {
 		return 1;
 	}
+}
+
+function slidesDuplicate(slider) {
+	let sliderBody = slider.querySelector('.top-slider__body');
+	let slides = slider.querySelectorAll('[data-slide]');
+	let duplicatedSlides = Array.from(slides).map((slide) => slide.cloneNode(true));
+	sliderBody.append(...duplicatedSlides);
 }
 
 function sliderInit(slider, count, spaceBetween) {

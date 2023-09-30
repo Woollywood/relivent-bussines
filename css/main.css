@@ -35,9 +35,7 @@
   box-sizing: border-box;
 }
 
-:hover {
-  transition: 0.15s;
-}
+
 
 body {
   color: #000000;
@@ -52,7 +50,12 @@ a {
 }
 
 a:hover {
+  transition: 0.15s;
   color: #fff;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 ul {
@@ -102,24 +105,34 @@ img {
   flex-wrap: wrap;
 }
 
+.logo {
+  margin: 5px 0 0 0;
+}
+
+.head__block__main {
+  max-width: 1042px;
+  margin: 0 auto;
+}
+
 .container {
   padding: 0 20px;
-  max-width: 1390px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
 .head__top {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 14px 65px 14px 20px;
+  padding: 6px 6px 6px 20px;
   -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   margin: 0 0 86px 0;
   position: relative;
   z-index: 11;
 }
 
 header {
+  height: 100vh;
   padding: 26px 0 20px 0;
   background: url(../images/header-bg.png) 0 0 no-repeat;
   background-size: cover;
@@ -135,7 +148,6 @@ header {
 .head__slogan2 {
   color: #fff;
   text-align: center;
-  font-family: "TTHoves-Medium";
   font-size: 64px;
   line-height: 72px;
   margin: 0 0 80px 0;
@@ -175,6 +187,7 @@ header {
 
 .menu__top li a {
   text-decoration: none;
+  font-family: "TTHoves-Light";
 }
 
 .consultation {
@@ -191,7 +204,9 @@ header {
 
 .consultation:hover {
   background: #028fde;
+  transition: 0.15s;
 }
+
 
 .select-hidden {
   display: none;
@@ -199,32 +214,50 @@ header {
   padding-right: 10px;
 }
 
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  width: 100px;
+  height: 33px;
+}
+
 .select-styled {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  display: none;
   left: 0;
   padding: 8px 15px;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-
 .select-styled:after {
   content: "";
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  width: 10px;
+  height: 10px;
+  background: url(../images/arr-eng.svg) 0 0 no-repeat;
   position: absolute;
   top: 16px;
   right: 10px;
 }
+.select-styled:hover {
+ 
+}
+.select-styled:active, .select-styled.active {
 
-.select-styled:active:after,
-.select-styled.active:after {
-  top: 9px;
-  border-color: transparent transparent #fff transparent;
+}
+.select-styled:active:after, .select-styled.active:after {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  top:13px;
 }
 
 .select-options {
@@ -239,21 +272,20 @@ header {
   background: #000;
   list-style: none;
 }
-
 .select-options li {
   margin: 0;
   padding: 12px 0;
   text-indent: 15px;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
-
-.select-options li:hover,
-.select-options li.is-selected {
+.select-options li:hover, .select-options li.is-selected {
   color: #000;
   background: #fff;
 }
-
-.select-options li[rel=hide] {
+.select-options li[rel="hide"] {
   display: none;
 }
 
@@ -265,7 +297,12 @@ header {
 
 .scroll_down {
   text-align: center;
-  margin: 421px 0 0 0;
+  margin: 211px 0 0 0;
+  position: absolute;
+  bottom: 20px;
+  margin: 0 auto;
+  transform: translate(-50%,0%);
+  left: 50%;
 }
 
 .collect {
@@ -362,11 +399,13 @@ ul.tabs li.current {
   border-width: 0.5px;
   width: 240px;
   height: 240px;
+  text-decoration: none;
   margin: 0 auto;
 }
 
 .get_it:hover {
   color: #fff;
+  transition: 0.15s;
   background-color: #0085ff;
 }
 
@@ -374,6 +413,7 @@ h2 {
   font-size: 48px;
   text-align: center;
   margin: 0 0 10px 0;
+  font-family: "TTHoves-Light";
 }
 
 .why__wrap {
@@ -468,6 +508,10 @@ footer {
   margin: 0 0 40px 0;
 }
 
+.menu__bottom li {
+  margin: 0 8px 0 0;
+}
+
 .menu__bottom li a {
   border-radius: 12px;
   border-style: solid;
@@ -477,11 +521,17 @@ footer {
   font-family: "TTHoves-Medium";
   border-width: 1px;
   padding: 14px 24px 14px 24px;
+  
+}
+
+.menu__bottom li:last-child {
+  margin: 0;
 }
 
 .menu__bottom li a:hover {
   border-color: #0085ff;
   border-width: 1.2px;
+  transition: 0.15s;
 }
 
 .copyright {
@@ -525,6 +575,7 @@ footer {
 
 .footer__right_button:hover {
   background: #505050;
+  transition: 0.15s;
 }
 
 .footer__right_button.location {
@@ -552,6 +603,7 @@ footer {
 
 .social_bottom a:hover {
   background: #505050;
+  transition: 0.15s;
 }
 
 .footer-link-privacy__item {
@@ -564,6 +616,7 @@ footer {
 
 .footer-link-privacy__item:hover {
   text-decoration: none;
+  transition: 0.15s;
 }
 
 .partners {
@@ -588,12 +641,14 @@ footer {
 
 .partner__wrap:hover .partner__body {
   color: #fff;
+  
 }
 
 .partner__wrap:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
 }
 
 .partner__wrap2 {
@@ -618,7 +673,11 @@ footer {
 .partner__wrap2:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partner__wrap3 {
@@ -643,7 +702,11 @@ footer {
 .partner__wrap3:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partner__wrap4 {
@@ -668,7 +731,11 @@ footer {
 .partner__wrap4:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partner__wrap5 {
@@ -693,7 +760,11 @@ footer {
 .partner__wrap5:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partner__wrap6 {
@@ -718,8 +789,30 @@ footer {
 .partner__wrap6:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
-  transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
+
+.partner__wrap7:hover .partner__title {
+  color: #fff;
+}
+
+.partner__wrap7:hover .partner__body {
+  color: #fff;
+}
+
+.partner__wrap8:hover .partner__title {
+  color: #fff;
+}
+
+.partner__wrap8:hover .partner__body {
+  color: #fff;
+}
+
+
 
 .partner__wrap7 {
   position: relative;
@@ -730,6 +823,16 @@ footer {
   border-width: 0.5px;
   height: 400px;
   padding: 20px 20px 20px 20px;
+}
+
+.partner__wrap7:hover {
+  background: url(../images/partner-img.png) 0 0 no-repeat;
+  background-size: cover;
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partner__wrap8 {
@@ -743,6 +846,16 @@ footer {
   padding: 20px 20px 20px 20px;
 }
 
+.partner__wrap8:hover {
+  background: url(../images/partner-img.png) 0 0 no-repeat;
+  background-size: cover;
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
 .partner__title {
   font-family: "TTHoves-Medium";
   color: #000000;
@@ -754,8 +867,12 @@ footer {
   position: absolute;
   bottom: 20px;
   padding: 0 20px 0 0;
-  transition: 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   font-size: 14px;
+  -webkit-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -ms-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .partners__body {
@@ -848,6 +965,11 @@ footer {
 
 .menu__burger li a:hover {
   opacity: 0.8;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 .copyright__768 {
@@ -1012,13 +1134,21 @@ footer {
   bottom: 0;
   height: 1px;
   right: 0;
-  transition: 0.3s;
+  transition: 0.15s;
   max-width: 0;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 .header__item:hover:after {
   max-width: 100%;
-  transition: 0.3s;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 .mypage-border3 {
@@ -1114,6 +1244,7 @@ footer {
   color: #dfdfdf;
   border: none;
   background: #fbfbfb;
+  width: 100%;
 }
 
 .input__wrap input::-moz-placeholder {
@@ -1143,6 +1274,11 @@ input {
 
 .btn__get:hover {
   background: #505050;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 .get__title {
@@ -1151,10 +1287,17 @@ input {
   margin: 12px 0 0 0;
 }
 
-/* first change display of the orginal select element to none */
-.custom-select select {
+._form-error {
+  color:red;
+}
+
+
+.custom-select .select {
   display: none;
 }
+
+/* first change display of the orginal select element to none */
+
 
 .custom-select {
   width: auto;
@@ -1180,7 +1323,6 @@ input {
   justify-content: space-between;
   width: auto;
   font-size: 32px;
-  text-transform: uppercase;
   color: #dfdfdf;
   margin: 0 0 8px 0;
 }
@@ -1269,6 +1411,7 @@ input {
 
 .custom-select p {
   padding: 0 0 0 20px;
+  font-family: "TTHoves-Medium";
   margin: 12px 0 0 0;
   font-size: 14px;
 }
@@ -1326,11 +1469,13 @@ input {
   position: absolute;
   top: 14px;
   left: 20px;
+  font-family: "TTHoves-Medium";
 }
 
 .label__title3 {
   position: absolute;
   top: 14px;
+  font-family: "TTHoves-Medium";
   left: 213px;
 }
 

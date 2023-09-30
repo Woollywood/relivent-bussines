@@ -165,14 +165,41 @@
     .burger__block .footer__right_button {
         background: #000 !important;
     }
+
+    .select {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+        color: #fff;
+        width: 100px;
+        height: 33px;
+        margin: 0px 56px 0 0px;
+    }
     
 }
 
 
 /* Ipad*/ 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
 
-    
+    .label__title2 {
+        position: absolute;
+        top: 14px;
+        left: 15px;
+        font-family: "TTHoves-Medium";
+    }
+
+    .label__title3 {
+        position: absolute;
+        top: 14px;
+        font-family: "TTHoves-Medium";
+        left: 234px;
+    }
+
+    .tabs__tab {
+        width: 100%;
+    }
     .slick-prev, .slick-next {
         display: none !important;
     }
@@ -195,7 +222,7 @@
 
     .head__block_wrap {
         margin: 0 -4px;
-        width: 790px;
+        width: 800px;
         padding: 0 0 13px 0;
     }
 
@@ -391,8 +418,108 @@
     }
 }
 
+@media screen and (max-width: 545px) {
+    .label__title3 {
+        position: absolute;
+        top: 14px;
+        font-family: "TTHoves-Medium";
+        left: 169px;
+    }
+}
+
 /* Galaxy S8+*/ 
 @media screen and (max-width: 480px) {
+
+    .label__title2 {
+        position: absolute;
+        top: 14px;
+        left: 9px;
+        font-family: "TTHoves-Medium";
+    }
+
+    .input__wrap input {
+        font-size: 20px;
+        color: #dfdfdf;
+        border: none;
+        background: #fbfbfb;
+        width: 100%;
+    }
+
+    .selected-item {
+        padding: 6px 20px 0px 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        font-size: 20px;
+        color: #dfdfdf;
+        margin: 0 0 8px 0;
+    }
+
+    .custom-select p {
+        padding: 0 0 0 20px;
+        font-family: "TTHoves-Medium";
+        margin: 12px 0 0 0;
+        font-size: 12px;
+    }
+    .arrow-down {
+        width: 16px;
+        height: 11px;
+        background: url(../images/polygon.svg) 0 0 no-repeat;
+        display: inline-block;
+        transform: rotate(2deg);
+        transition: 0.4s;
+        top: 0;
+        margin: -16px 0px 0 8px;
+    }
+
+    .field input {
+        color: #dfdfdf;
+        font-size: 20px;
+        padding: 2px;
+        border: 0;
+        outline: none;
+        border-radius: 16px;
+        border: 0.5px #dfdfdf;
+        background: #fbfbfb;
+        padding: 25px 20px 0px 20px;
+        margin: 0 0 8px 5px;
+        height: 69px;
+        width: 75%;
+    }
+
+    .country-phone-selected {
+        padding: 37px 0 0 12px !important;
+        font-size: 20px !important;
+    }
+
+    .country-phone-selected {
+        height: 69px !important;
+    }
+
+    .country-phone-selected img {
+        margin: 5px 7px 0 0 !important;
+    }
+
+    .country-phone-selected {
+        background-position: 91% 81% !important;
+    }
+
+    .label__title {
+        font-size: 12px;
+        letter-spacing: 0.14px;
+        margin: 0 0 4px 4px;
+    }
+
+    .label__title3 {
+        position: absolute;
+        top: 12px;
+        font-family: "TTHoves-Regular";
+        left: 132px;
+    }
+
   .logo a img {
     width: 137px;
   }
@@ -417,11 +544,39 @@
         top: 14px;
         right: 10px;
     }
+
+    .btn__get {
+        padding: 18px 20px 18px 20px;
+        background: #202020;
+        width: 100%;
+        font-family: "TTHoves-Medium";
+        cursor: pointer;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 16px;
+    }
+
+    .mail-section {
+        padding: 40px 0 60px 0;
+    }
 }
 
 /* Galaxy*/ 
-@media screen and (max-width: 415px) {
-  
+@media screen and (max-width: 400px) {
+    .label__title3 {
+        position: absolute;
+        top: 12px;
+        font-family: "TTHoves-Regular";
+        left: 125px;
+    }
+
+    .label__title {
+        font-size: 12px;
+        letter-spacing: 0.14px;
+        margin: 0 0 4px 3px;
+    }
 }
 
 

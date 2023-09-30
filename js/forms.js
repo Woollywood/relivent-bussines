@@ -102,6 +102,11 @@ let formValidate = {
 		} else if (formRequiredItem.type === 'checkbox' && !formRequiredItem.checked) {
 			this.addError(formRequiredItem);
 			error++;
+		} else if (formRequiredItem.classList.contains('tel')) {
+			if (formRequiredItem.value.length < 13) {
+				this.addError(formRequiredItem);
+				error++;
+			}
 		} else {
 			if (!formRequiredItem.value.trim()) {
 				this.addError(formRequiredItem);

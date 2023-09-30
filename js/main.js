@@ -135,7 +135,7 @@ $('select').each(function(){
             {
                 breakpoint: 1366,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -143,7 +143,7 @@ $('select').each(function(){
             },
 
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -346,3 +346,5 @@ $('html , body').click(function(e){
 
 
 });
+
+
