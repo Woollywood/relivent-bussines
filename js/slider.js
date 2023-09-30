@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		isScroll = false;
 	});
 
+	let prependSlideIndex = slider.querySelectorAll('[data-slide]').length - 1;
+	let sliderIndexAppend = 0;
+
+
 	let sliderBody = slider.querySelector('.top-slider__body');
 	slider.addEventListener('mousemove', (e) => {
 		if (isScroll) {
@@ -48,6 +52,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			prevMoveX = e.clientX;
 
 			scrollDirection ? sliderBody.scrollLeft++ : sliderBody.scrollLeft--;
+			sliderIndexAppend--;
+
+			if (sliderBody.scrollLeft === 0) {
+				addSlidePrev(slider, prependSlideIndex--);
+
+				if (prependSlideIndex === -1) {
+					prependSlideIndex = slider.querySelectorAll('[data-slide]').length - 1;
+				}
+			}
 		}
 	});
 
@@ -57,26 +70,40 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		slideScrollable = getSlideScrollable(slider);
 	});
 
-	let direction = 1;
+	const DELAY = 60;
 
 	setTimeout(function animate() {
-		if (direction) {
-			sliderBody.scrollLeft++;
+		sliderBody.scrollLeft++;
 
-			if (sliderBody.scrollLeft >= slideScrollable) {
-				direction = 0;
-			}
-		} else {
-			sliderBody.scrollLeft--;
+		let slides = slider.querySelectorAll('[data-slide]');
+		let preLastSlide = slides[slides.length - 2];
+		let preLastSlideBox = preLastSlide.getBoundingClientRect();
 
-			if (sliderBody.scrollLeft === 0) {
-				direction = 1;
+		if (preLastSlideBox.left <= window.innerWidth) {
+			moveSlideToTheEnd(slider, sliderIndexAppend++);
+
+			if (sliderIndexAppend === slides.length) {
+				sliderIndexAppend = 0;
 			}
 		}
 
-		setTimeout(animate, 20);
-	}, 20);
+		setTimeout(animate, DELAY);
+	}, DELAY);
 });
+
+function moveSlideToTheEnd(slider, slideIndex) {
+	sliderBody = slider.querySelector('.top-slider__body');
+	let slide = slider.querySelector(`[data-slide-id="${slideIndex}"]`);
+	sliderBody.append(slide);
+	sliderBody.scrollLeft -= slide.clientWidth + parseInt(getComputedStyle(slide).marginLeft);
+}
+
+function addSlidePrev(slider, slideIndex) {
+	sliderBody = slider.querySelector('.top-slider__body');
+	let slide = slider.querySelector(`[data-slide-id="${slideIndex}"]`);
+	sliderBody.prepend(slide);
+	sliderBody.scrollLeft += slide.clientWidth + parseInt(getComputedStyle(slide).marginLeft);
+}
 
 function getSliderCount(windowWidth) {
 	if (windowWidth > 1300) {
@@ -102,6 +129,7 @@ function sliderInit(slider, count, spaceBetween) {
 			width: ${width}px;
 			margin-left: ${index > 0 ? spaceBetween : 0}px;
 		`;
+		slide.dataset.slideId = index;
 	});
 }
 
