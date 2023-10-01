@@ -50,7 +50,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 			prevMoveX = e.clientX;
 
-			scrollDirection ? sliderBody.scrollLeft++ : sliderBody.scrollLeft--;
+			if (window.innerWidth <= 1440) {
+				scrollDirection ? sliderBody.scrollLeft++ : sliderBody.scrollLeft--;
+			} else {
+				if (scrollDirection) {
+					sliderBody.scrollLeft += 4;
+				} else {
+					sliderBody.scrollLeft -= 4;
+				}
+			}
 
 			if (sliderBody.scrollLeft === 0) {
 				addSlidePrev(slider, prependSlideIndex--);
