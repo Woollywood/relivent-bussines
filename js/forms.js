@@ -180,35 +180,9 @@ function formSubmit() {
 	}
 	async function formSubmitAction(form, e) {
 		const error = !form.hasAttribute('data-no-validate') ? formValidate.getErrors(form) : 0;
-		if (error === 0) {
-			const ajax = form.hasAttribute('data-ajax');
-			if (ajax) {
-				// Если режим ajax
-				e.preventDefault();
-				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
-				const formData = new FormData(form);
-
-				form.classList.add('_sending');
-				const response = await fetch(formAction, {
-					method: formMethod,
-					body: formData,
-				});
-				if (response.ok) {
-					let responseResult = await response.json();
-					form.classList.remove('_sending');
-					formSent(form, responseResult);
-				} else {
-					alert('Ошибка');
-					form.classList.remove('_sending');
-				}
-			} else if (form.hasAttribute('data-dev')) {
-				// Если режим разработки
-				e.preventDefault();
-				formSent(form);
-			}
-		} else {
+		if (error > 0) {
 			e.preventDefault();
+			console.log('rere');
 			if (form.querySelector('._form-error') && form.hasAttribute('data-goto-error')) {
 				const formGoToErrorClass = form.dataset.gotoError ? form.dataset.gotoError : '._form-error';
 				gotoBlock(formGoToErrorClass, true, 1000);
