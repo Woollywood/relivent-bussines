@@ -35,8 +35,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   color: #000000;
   font-size: 16px;
@@ -165,7 +163,7 @@ header {
 .head__block {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
   border-radius: 20px;
   border-style: solid;
   border-color: var(--gray, #808080);
@@ -207,7 +205,6 @@ header {
   transition: 0.15s;
 }
 
-
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -231,11 +228,9 @@ header {
   bottom: 0;
   left: 0;
   padding: 8px 15px;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
 .select-styled:after {
   content: "";
   width: 10px;
@@ -245,19 +240,15 @@ header {
   top: 16px;
   right: 10px;
 }
-.select-styled:hover {
- 
-}
-.select-styled:active, .select-styled.active {
 
-}
-.select-styled:active:after, .select-styled.active:after {
+.select-styled:active:after,
+.select-styled.active:after {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  top:13px;
+  top: 13px;
 }
 
 .select-options {
@@ -272,20 +263,21 @@ header {
   background: #000;
   list-style: none;
 }
+
 .select-options li {
   margin: 0;
   padding: 12px 0;
   text-indent: 15px;
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
-.select-options li:hover, .select-options li.is-selected {
+
+.select-options li:hover,
+.select-options li.is-selected {
   color: #000;
   background: #fff;
 }
-.select-options li[rel="hide"] {
+
+.select-options li[rel=hide] {
   display: none;
 }
 
@@ -301,7 +293,7 @@ header {
   position: absolute;
   bottom: 20px;
   margin: 0 auto;
-  transform: translate(-50%,0%);
+  transform: translate(-50%, 0%);
   left: 50%;
 }
 
@@ -496,13 +488,6 @@ footer {
   margin: 0 0 12px 0;
 }
 
-.ft__body {
-  color: #999999;
-  max-width: 600px;
-  font-size: 14px;
-  margin: 0 0 142px 0;
-}
-
 .menu__bottom {
   display: flex;
   margin: 0 0 40px 0;
@@ -521,7 +506,6 @@ footer {
   font-family: "TTHoves-Medium";
   border-width: 1px;
   padding: 14px 24px 14px 24px;
-  
 }
 
 .menu__bottom li:last-child {
@@ -641,14 +625,12 @@ footer {
 
 .partner__wrap:hover .partner__body {
   color: #fff;
-  
 }
 
 .partner__wrap:hover {
   background: url(../images/partner-img.png) 0 0 no-repeat;
   background-size: cover;
   transition: 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-
 }
 
 .partner__wrap2 {
@@ -812,8 +794,6 @@ footer {
   color: #fff;
 }
 
-
-
 .partner__wrap7 {
   position: relative;
   background: #fbfbfb;
@@ -886,7 +866,7 @@ footer {
 
 .burger {
   position: absolute;
-  top: 36px;
+  top: 32px;
   right: 24px;
   display: none !important;
   color: #23f0ff;
@@ -900,8 +880,8 @@ footer {
   background: #0085ff;
   /* padding: 15px; */
   border-radius: 10px;
-  height: 40px;
-  width: 40px;
+  height: 33px;
+  width: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -911,9 +891,9 @@ footer {
   display: none;
   background: #0085ff;
   /* padding: 12px; */
-  width: 40px;
+  width: 33px;
   border-radius: 10px;
-  height: 40px;
+  height: 33px;
 }
 
 .burger.burger-open {
@@ -945,12 +925,12 @@ footer {
   border-radius: 0px 0px 30px 30px;
   transition: 0.5s ease all;
   -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 
 .mt-mobile.nav-open {
   -webkit-clip-path: circle(0px at 100% 0px);
-          clip-path: circle(0px at 100% 0px);
+  clip-path: circle(0px at 100% 0px);
 }
 
 .menu__burger li {
@@ -1231,6 +1211,19 @@ footer {
   background: #fbfbfb;
   padding: 12px 20px 12px 20px;
   margin: 0 0 8px 0;
+  border: 1px solid transparent;
+}
+.input__wrap._form-error {
+  border: 1px solid #ff2929;
+}
+.input__wrap._form-error input {
+  color: #ff2929;
+}
+.input__wrap._form-error input::-moz-placeholder {
+  color: #ff2929;
+}
+.input__wrap._form-error input::placeholder {
+  color: #ff2929;
 }
 
 .label__title {
@@ -1287,18 +1280,11 @@ input {
   margin: 12px 0 0 0;
 }
 
-._form-error {
-  color:red;
-}
-
-
 .custom-select .select {
   display: none;
 }
 
 /* first change display of the orginal select element to none */
-
-
 .custom-select {
   width: auto;
   padding: 0px;
@@ -1307,6 +1293,9 @@ input {
   background: #fbfbfb;
   border-radius: 16px;
   margin: 0 0 8px 0;
+}
+.custom-select._form-error {
+  border: 0.5px solid #ff2929;
 }
 
 .custom-select:hover {
@@ -1416,6 +1405,20 @@ input {
   font-size: 14px;
 }
 
+.country-phone {
+  border: 1px solid transparent;
+}
+.country-phone._form-error input {
+  color: #ff2929;
+  border: 1px solid #ff2929;
+}
+.country-phone._form-error input::-moz-placeholder {
+  color: #ff2929;
+}
+.country-phone._form-error input::placeholder {
+  color: #ff2929;
+}
+
 .country-phone-selector {
   width: 30%;
 }
@@ -1482,6 +1485,7 @@ input {
 .top-slider {
   padding-bottom: 146px;
 }
+
 @media (max-width: 768px) {
   .top-slider {
     padding-bottom: 64px;
@@ -1492,15 +1496,19 @@ input {
   display: flex;
   cursor: grab;
 }
+
 .top-slider__body::-webkit-scrollbar {
   width: 0;
 }
+
 .top-slider__body::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .top-slider__body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
 .top-slider__slide-img {
   position: relative;
   width: 100%;
@@ -1508,6 +1516,7 @@ input {
   border-radius: 20px;
   overflow: hidden;
 }
+
 .top-slider__slide-img img {
   position: absolute;
   top: 0;
@@ -1515,5 +1524,42 @@ input {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+.footer__button {
+  font-size: 14px;
+  color: #fff;
+  transition: 0.15s;
+  background: #202020;
+  padding: 11px 10px 11px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  margin: 0 0 8px 0;
+  text-decoration: none;
+  max-width: 184px;
+}
+
+.footer__button:hover {
+  background: #505050;
+}
+
+.footer__button img {
+  margin: 2px 10px 0 0;
+}
+
+.footer__button.mail {
+  max-width: 184px;
+}
+
+.footer__button.address {
+  max-width: 306px;
+}
+
+.ft__body {
+  color: #999999;
+  max-width: 600px;
+  font-size: 14px;
+  margin: 0 0 125px 0;
 }

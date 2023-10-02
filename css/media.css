@@ -7,7 +7,7 @@
     .head__slogan2 {
         color: #fff;
         text-align: center;
-        font-family: 'TTHoves-Medium';
+  
         font-size: 64px;
         line-height: 72px;
         margin: 0 0 80px 0;
@@ -125,6 +125,17 @@
 
 @media screen and (max-width: 860px) {
 
+    .head__top {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 13px 6px 14px 20px;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        margin: 0 0 86px 0;
+        position: relative;
+        z-index: 11;
+    }
+
     .acc__block2 {
         display: none;
     }
@@ -213,7 +224,7 @@
         font-size: 40px;
         line-height: 43px;
         margin: 0 0 60px 0;
-        font-family: 'TTHoves-Regular';
+       
     }
 
     .head__block__main {
@@ -228,7 +239,7 @@
 
     h2 {
         font-size: 32px;
-        font-family: 'TTHoves-Regular';
+
     }
 
     .tabs__body {
@@ -251,7 +262,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 818px;
+        width: 821px;
     }
 
     .rel {
@@ -358,7 +369,7 @@
         font-size: 14px;
         color: #808080;
         text-align: center;
-        margin: 0 0 40px 0;
+        margin: 0 0 24px 0;
     }
 
     .advent__block {
@@ -429,6 +440,17 @@
 
 /* Galaxy S8+*/ 
 @media screen and (max-width: 480px) {
+
+    .option {
+        margin-bottom: 4px;
+        padding: 14px 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        font-size: 20px;
+        line-height: 35px;
+        background: #fbfbfb;
+        border-radius: 16px;
+    }
 
     .label__title2 {
         position: absolute;
@@ -536,11 +558,6 @@
 
     .select-styled:after {
         content: "";
-        width: 0;
-        height: 0;
-        border: 6px solid transparent;
-        border-color: #fff transparent transparent transparent;
-        position: absolute;
         top: 14px;
         right: 10px;
     }
@@ -581,8 +598,19 @@
 
 
 /* Iphone 6.7.8 */ 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
+    .label__title {
+        font-size: 12px;
+        letter-spacing: 0.14px;
+        margin: 0 0 4px 2px;
+    }
 
+    .label__title3 {
+        position: absolute;
+        top: 12px;
+        font-family: "TTHoves-Regular";
+        left: 123px;
+    }
 }
 
 /* Iphone 5.5SE */ 

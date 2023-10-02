@@ -665,7 +665,7 @@
 					<button class="tabs__tab-btn" data-tab-id="about">Application</button>
 				</div>
 
-				<form data-tab="home" class="tabs__tab" method="post" action="#" data-dev>
+				<form data-tab="home" class="tabs__tab" method="post" action="#" data-ajax>
 					<div class="st_wrap flex">
 						<div class="form">
 							<div class="field">
@@ -678,7 +678,7 @@
 									name="phone"
 									autofocus="true"
 									placeholder="Phone Number"
-									data-required />
+									data-required="parent: .country-phone" />
 							</div>
 						</div>
 					</div>
@@ -694,7 +694,7 @@
 					<div class="get__title">By sending this message you automatically agree to the privacy policy</div>
 				</form>
 
-				<form data-tab="about" class="tabs__tab" action="#" method="post" data-dev>
+				<form data-tab="about" class="tabs__tab" action="#" method="post" data-ajax>
 					<div class="st_wrap flex">
 						<div class="form">
 							<div class="field">
@@ -707,16 +707,16 @@
 									name="phone"
 									autofocus="true"
 									placeholder="Phone Number"
-									data-required />
+									data-required="parent: .country-phone" />
 							</div>
 						</div>
 					</div>
 					<div class="input__wrap">
 						<div class="label__title">Email:</div>
-						<input type="email" placeholder="Email address" />
+						<input type="email" placeholder="Email address" data-required="email" />
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Type of company:</p>
 						<select name="box-1" id="">
 							<option value="0">Choose a type</option>
@@ -727,7 +727,7 @@
 						</select>
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Average attendance:</p>
 						<select name="box-1" id="">
 							<option value="0">Choose number of events</option>
@@ -738,7 +738,7 @@
 						</select>
 					</div>
 
-					<div class="custom-select">
+					<div class="custom-select" data-required="select">
 						<p>Average number of events per month</p>
 						<select name="box-1" id="">
 							<option value="0">Choose number of events</option>
@@ -781,15 +781,15 @@
 					<div class="ft__block2">
 						<div class="contact__title">Contacts</div>
 
-						<a href="tel:+48222662664" class="footer__right_button phone"
+						<a href="tel:+48222662664" class="footer__button"
 							><img src="images/phone-ico.svg" /><span>+48 222 662 664</span></a
 						>
 
-						<a href="mailto:partners@relivent.eu" class="footer__right_button sms"
+						<a href="mailto:partners@relivent.eu" class="footer__button mail"
 							><img src="images/sms-ico.svg" /><span>partners@relivent.eu</span></a
 						>
 
-						<a href="mailto:partners@relivent.eu" class="footer__right_button location">
+						<a href="mailto:partners@relivent.eu" class="footer__button address">
 							<img src="images/location.svg" /><span>Puławska 2, 02-566 Warszawa, Польша</span>
 						</a>
 

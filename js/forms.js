@@ -83,7 +83,16 @@ let formValidate = {
 	},
 	validateInput(formRequiredItem) {
 		let error = 0;
-		if (formRequiredItem.dataset.required === 'email') {
+		if (formRequiredItem.dataset.required.includes('parent') && formRequiredItem.classList.contains('tel')) {
+			if (formRequiredItem.value.length < 13) {
+				const parentSelector = formRequiredItem.dataset.required.split(':')[1].trim();
+				const parent = formRequiredItem.closest(parentSelector);
+				if (parent) {
+					this.addError(parent);
+					error++;
+				}
+			}
+		} else if (formRequiredItem.dataset.required === 'email') {
 			formRequiredItem.value = formRequiredItem.value.replace(' ', '');
 			if (this.emailTest(formRequiredItem)) {
 				this.addError(formRequiredItem);
@@ -102,11 +111,6 @@ let formValidate = {
 		} else if (formRequiredItem.type === 'checkbox' && !formRequiredItem.checked) {
 			this.addError(formRequiredItem);
 			error++;
-		} else if (formRequiredItem.classList.contains('tel')) {
-			if (formRequiredItem.value.length < 13) {
-				this.addError(formRequiredItem);
-				error++;
-			}
 		} else {
 			if (!formRequiredItem.value.trim()) {
 				this.addError(formRequiredItem);
