@@ -11,10 +11,10 @@ if (document.querySelector('.top-slider__slider')) {
 		// preloadImages: false,
 		// lazy: true,
 
-		// autoplay: {
-		// 	delay: 1000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 
 		// Брейкпоинты
 		breakpoints: {
