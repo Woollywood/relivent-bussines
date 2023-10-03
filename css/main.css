@@ -66,6 +66,10 @@ ul {
   clear: both;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 button {
   border: none;
   background: none;
@@ -1484,6 +1488,25 @@ input {
 
 .top-slider {
   padding-bottom: 146px;
+}
+.top-slider__slider {
+  overflow: visible;
+}
+.top-slider__img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 96%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.top-slider__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 768px) {

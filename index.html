@@ -8,6 +8,8 @@
 		<title></title>
 
 		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 		<link href="css/main.css" rel="stylesheet" />
 		<link href="css/media.css" rel="stylesheet" />
 
@@ -24,805 +26,818 @@
 	</head>
 
 	<body>
-		<nav class="mt-mobile nav-open">
-			<div class="mt-munu-mb">
-				<ul class="menu__burger">
-					<li><a href="#">About ticket system</a></li>
-					<li><a href="#">How to start</a></li>
-					<li><a href="#">Become Partner</a></li>
-				</ul>
+		<div class="wrapper">
+			<nav class="mt-mobile nav-open">
+				<div class="mt-munu-mb">
+					<ul class="menu__burger">
+						<li><a href="#">About ticket system</a></li>
+						<li><a href="#">How to start</a></li>
+						<li><a href="#">Become Partner</a></li>
+					</ul>
 
-				<div class="burger__block">
-					<a href="#" class="consultation flex items_center"
-						>Consultation <img src="images/icon-consul.svg" alt=""
-					/></a>
-
-					<a href="tel:+48222662664" class="footer__right_button phone"
-						><img src="images/phone-ico.svg" /><span>+48 222 662 664</span></a
-					>
-
-					<a href="mailto:partners@relivent.eu" class="footer__right_button sms"
-						><img src="images/sms-ico.svg" /><span>partners@relivent.eu</span></a
-					>
-
-					<a href="mailto:partners@relivent.eu" class="footer__right_button location">
-						<img src="images/location.svg" /><span>Puławska 2, 02-566 Warszawa, Польша</span>
-					</a>
-				</div>
-			</div>
-		</nav>
-		<div class="burger">
-			<i><img src="images/burger.svg" alt="" /> </i>
-			<i>
-				<img src="images/burger-close.svg" alt="" />
-			</i>
-		</div>
-		<header>
-			<div class="container">
-				<div class="head__top flex items_center between">
-					<div class="head__inner flex items_center">
-						<div class="logo">
-							<a href="index.html" title=""><img src="images/logo.svg" alt="" /></a>
-						</div>
-						<ul class="menu__top flex" id="onePgaeNav">
-							<li class="header__item">
-								<a href="#main" class="scroll item-visible">About ticket system</a>
-								<a href="#main" class="scroll item-hidden">About ticket system</a>
-							</li>
-							<li class="header__item">
-								<a href="#about" class="scroll item-visible">How to start</a>
-								<a href="#about" class="scroll item-hidden">How to start</a>
-							</li>
-							<li class="header__item">
-								<a href="#easy" class="scroll item-visible">Become Partner</a>
-								<a href="#easy" class="scroll item-hidden">Become Partner</a>
-							</li>
-						</ul>
-					</div>
-					<div class="head__inner flex items_center">
-						<select id="mounth">
-							<option value="hide">Español</option>
-							<option value="january">Español</option>
-							<option value="february">English</option>
-						</select>
-
+					<div class="burger__block">
 						<a href="#" class="consultation flex items_center"
 							>Consultation <img src="images/icon-consul.svg" alt=""
 						/></a>
-					</div>
-				</div>
 
-				<div class="head__slogan">Relivent tickets sales systems</div>
-				<h1 class="head__slogan2">
-					Start selling tickets easily, collect statistics and optimize right in your account.
-				</h1>
-				<div class="head__block__main">
-					<div class="flex flex_wrap head__block_wrap">
-						<div class="head__block_in">
-							<div class="head__block">
-								<svg
-									class="_24-support__group"
-									width="25"
-									height="24"
-									viewBox="0 0 25 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M18.5 2H6.5C4.84 2 3.5 3.33 3.5 4.97V15.88C3.5 17.52 4.84 18.85 6.5 18.85H7.26C8.06 18.85 8.82 19.16 9.38 19.72L11.09 21.41C11.87 22.18 13.14 22.18 13.92 21.41L15.63 19.72C16.19 19.16 16.96 18.85 17.75 18.85H18.5C20.16 18.85 21.5 17.52 21.5 15.88V4.97C21.5 3.33 20.16 2 18.5 2ZM10.88 13.01C11.29 13.01 11.63 13.35 11.63 13.76C11.63 14.17 11.29 14.51 10.88 14.51H8.2C7.76 14.51 7.35 14.3 7.09 13.94C6.84 13.6 6.78 13.18 6.9 12.78C7.25 11.71 8.11 11.13 8.87 10.61C9.67 10.07 10.12 9.73 10.12 9.15C10.12 8.63 9.7 8.21 9.18 8.21C8.66 8.21 8.25 8.64 8.25 9.16C8.25 9.57 7.91 9.91 7.5 9.91C7.09 9.91 6.75 9.57 6.75 9.16C6.75 7.82 7.84 6.72 9.19 6.72C10.54 6.72 11.63 7.81 11.63 9.16C11.63 10.57 10.57 11.29 9.72 11.87C9.19 12.23 8.69 12.57 8.44 13.02H10.88V13.01ZM17.5 13.08H17.29V13.77C17.29 14.18 16.95 14.52 16.54 14.52C16.13 14.52 15.79 14.18 15.79 13.77V13.08H13.83C13.83 13.08 13.83 13.08 13.82 13.08C13.33 13.08 12.88 12.82 12.63 12.4C12.38 11.97 12.38 11.44 12.63 11.02C13.31 9.85 14.1 8.52 14.82 7.36C15.14 6.85 15.75 6.62 16.32 6.78C16.89 6.95 17.29 7.47 17.28 8.07V11.59H17.5C17.91 11.59 18.25 11.93 18.25 12.34C18.25 12.75 17.91 13.08 17.5 13.08Z"
-										fill="white" />
-									<path
-										d="M15.7891 11.5799V8.63989C15.1991 9.59989 14.5891 10.6299 14.0391 11.5699H15.7891V11.5799Z"
-										fill="white" />
-								</svg>
-
-								<div class="head__block__title">24/7 support</div>
-							</div>
-						</div>
-
-						<div class="head__block_in">
-							<div class="head__block">
-								<svg
-									class="vuesax-bold-tag-user__tag-user"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M18 2H6C4.34 2 3 3.33 3 4.97V15.88C3 17.52 4.34 18.86 6 18.86H6.76C7.55 18.86 8.32 19.17 8.88 19.73L10.59 21.42C11.37 22.19 12.63 22.19 13.41 21.42L15.12 19.73C15.68 19.17 16.45 18.86 17.24 18.86H18C19.66 18.86 21 17.52 21 15.88V4.97C21 3.33 19.66 2 18 2ZM12 5.55C13.08 5.55 13.95 6.43 13.95 7.5C13.95 8.56 13.11 9.41 12.07 9.45C12.03 9.45 11.97 9.45 11.92 9.45C10.87 9.41 10.04 8.56 10.04 7.5C10.05 6.43 10.92 5.55 12 5.55ZM14.75 14.69C13.24 15.7 10.76 15.7 9.25 14.69C7.92 13.81 7.92 12.35 9.25 11.46C10.77 10.45 13.25 10.45 14.75 11.46C16.08 12.35 16.08 13.8 14.75 14.69Z"
-										fill="white" />
-								</svg>
-
-								<div class="head__block__title">Personal manager</div>
-							</div>
-						</div>
-
-						<div class="head__block_in">
-							<div class="head__block">
-								<svg
-									class="vuesax-bold-folder-cloud__folder-cloud"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M15.5786 19.7C13.4686 19.85 13.4686 22.91 15.5786 23.06H20.5886C21.1986 23.06 21.7786 22.84 22.2286 22.43C23.7086 21.14 22.9186 18.54 20.9686 18.3C20.2686 14.08 14.1586 15.68 15.6086 19.7"
-										fill="white" />
-									<path
-										d="M15.5786 19.7C13.4686 19.85 13.4686 22.91 15.5786 23.06H20.5886C21.1986 23.06 21.7786 22.84 22.2286 22.43C23.7086 21.14 22.9186 18.54 20.9686 18.3C20.2686 14.08 14.1586 15.68 15.6086 19.7"
-										fill="white" />
-									<path
-										d="M22 11.07V15.34C22 15.66 21.49 15.8 21.27 15.57C20.8 15.08 20.21 14.71 19.53 14.5C17.96 14.01 16.15 14.49 15.01 15.67C14.29 16.44 13.9 17.4 13.88 18.44C13.88 18.62 13.79 18.78 13.65 18.89C12.93 19.46 12.49 20.35 12.49 21.37V21.38C12.49 21.7 12.26 21.99 11.94 21.99H7.34C4.4 22 2 19.6 2 16.65V6.42C2 3.98 3.98 2 6.42 2H8.74C10.37 2 10.88 2.53 11.53 3.4L12.93 5.26C13.24 5.67 13.28 5.72 13.86 5.72H16.65C19.03 5.72 21.05 7.28 21.74 9.44C21.89 9.89 21.97 10.35 21.99 10.84C22 10.91 22 11 22 11.07Z"
-										fill="white" />
-								</svg>
-
-								<div class="head__block__title">In-house CRM system</div>
-							</div>
-						</div>
-
-						<div class="head__block_in">
-							<div class="head__block">
-								<svg
-									class="vuesax-bold-discount-shape__group"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M21.5289 10.8699L20.0089 9.34988C19.7489 9.08988 19.5389 8.57988 19.5389 8.21988V6.05988C19.5389 5.17988 18.8189 4.45988 17.9389 4.45988H15.7889C15.4289 4.45988 14.9189 4.24988 14.6589 3.98988L13.1389 2.46988C12.5189 1.84988 11.4989 1.84988 10.8789 2.46988L9.33891 3.98988C9.08891 4.24988 8.57891 4.45988 8.20891 4.45988H6.05891C5.17891 4.45988 4.45891 5.17988 4.45891 6.05988V8.20988C4.45891 8.56988 4.24891 9.07988 3.98891 9.33988L2.46891 10.8599C1.84891 11.4799 1.84891 12.4999 2.46891 13.1199L3.98891 14.6399C4.24891 14.8999 4.45891 15.4099 4.45891 15.7699V17.9199C4.45891 18.7999 5.17891 19.5199 6.05891 19.5199H8.20891C8.56891 19.5199 9.07891 19.7299 9.33891 19.9899L10.8589 21.5099C11.4789 22.1299 12.4989 22.1299 13.1189 21.5099L14.6389 19.9899C14.8989 19.7299 15.4089 19.5199 15.7689 19.5199H17.9189C18.7989 19.5199 19.5189 18.7999 19.5189 17.9199V15.7699C19.5189 15.4099 19.7289 14.8999 19.9889 14.6399L21.5089 13.1199C22.1589 12.5099 22.1589 11.4899 21.5289 10.8699ZM7.99891 8.99988C7.99891 8.44988 8.44891 7.99988 8.99891 7.99988C9.54891 7.99988 9.99891 8.44988 9.99891 8.99988C9.99891 9.54988 9.55891 9.99988 8.99891 9.99988C8.44891 9.99988 7.99891 9.54988 7.99891 8.99988ZM9.52891 15.5299C9.37891 15.6799 9.18891 15.7499 8.99891 15.7499C8.80891 15.7499 8.61891 15.6799 8.46891 15.5299C8.17891 15.2399 8.17891 14.7599 8.46891 14.4699L14.4689 8.46988C14.7589 8.17988 15.2389 8.17988 15.5289 8.46988C15.8189 8.75988 15.8189 9.23988 15.5289 9.52988L9.52891 15.5299ZM14.9989 15.9999C14.4389 15.9999 13.9889 15.5499 13.9889 14.9999C13.9889 14.4499 14.4389 13.9999 14.9889 13.9999C15.5389 13.9999 15.9889 14.4499 15.9889 14.9999C15.9889 15.5499 15.5489 15.9999 14.9989 15.9999Z"
-										fill="white" />
-								</svg>
-
-								<div class="head__block__title">Flexible terms of 8%</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="scroll_down" id="onePgaeNav">
-					<a class="scroll" href="#collect"><img src="images/scroll-down.svg" alt="" /></a>
-				</div>
-			</div>
-		</header>
-
-		<section class="collect" id="collect">
-			<div class="container">
-				<h2>Collect statistics and control sales</h2>
-				<div class="tabs__wrap">
-					<ul class="tabs">
-						<li class="tab-link current" data-tab="tab-1">Data protection</li>
-						<li class="tab-link" data-tab="tab-2">Order history</li>
-						<li class="tab-link" data-tab="tab-3">Sales statistics</li>
-						<li class="tab-link" data-tab="tab-4">Financial reports</li>
-
-						<li class="tab-link" data-tab="tab-5">Reports on attendance</li>
-					</ul>
-				</div>
-
-				<div id="tab-1" class="tab-content current">
-					<div class="tabs__body">
-						Our ticket sales platform emphasizes protecting your personal information and financial
-						transactions. Your data is securely housed within our systems using state-of-the-art encryption
-						methods. Furthermore, we ensure that your payment card information is kept confidential and that
-						no unauthorized transactions occur. Trust us, your data isn't going anywhere, and neither is
-						your money.
-					</div>
-				</div>
-
-				<div id="tab-2" class="tab-content">
-					<div class="tabs__body">
-						Relivent prioritizes data protection using advanced encryption methods such as AES, RSA, and
-						SHA-3. AES secure data during data transfer , RSA assists in secure key exchange, while SHA-3
-						ensures data integrity. We also use tokenization for credit/debit cards security and comply with
-						PCI DSS standards. Your data and money are well secured with us.
-					</div>
-				</div>
-
-				<div id="tab-3" class="tab-content">
-					<div class="tabs__body">
-						A convenient list of all your orders that displays all necessary information about the purchase,
-						advanced features of personal account allows you to analyze your orders within the account. You
-						can compare indicators, track trends and generate reports.
-					</div>
-				</div>
-
-				<div id="tab-4" class="tab-content">
-					<div class="tabs__body">
-						Collect statistics data directly in your personal account. As well you can download it, edit and
-						send. We generate reports on purchases, returns, visits and constantly expand the range of data
-						that will help you improve your approach to event promotion and marketing.
-					</div>
-				</div>
-
-				<div id="tab-5" class="tab-content">
-					<div class="tabs__body">
-						Download and edit financial reports using our tools inside your personal account. You have full
-						access to all parameters and you can track changes in real time, as well as you can assign
-						limited rights to your employees to analyze statistics when you don't have enough time. You can
-						receive a report by mail every day to manage your business online.
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="top-slider">
-			<div class="container"></div>
-			<div class="top-slider__body">
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide.png" alt="slide" />
-					</div>
-				</div>
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide2.png" alt="slide" />
-					</div>
-				</div>
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide3.png" alt="slide" />
-					</div>
-				</div>
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide4.png" alt="slide" />
-					</div>
-				</div>
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide5.png" alt="slide" />
-					</div>
-				</div>
-				<div class="top-slider__slide" data-slide>
-					<div class="top-slider__slide-img">
-						<img src="images/slider/slide.png" alt="slide" />
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="about">
-			<div class="container">
-				<h2>Easy to start</h2>
-				<div class="rel__body">
-					Our team takes care of each client, you can always get advice and solve the necessary problem.
-				</div>
-
-				<div class="slider slick__mobile">
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>01 Complete the Form</p>
-							Begin the process by providing basic information about yourself via a brief form. This will
-							enable us to create a personalized offer that meets your unique needs.
-						</div>
-					</div>
-
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>02 Meet your personal manаger</p>
-							We are assigning you personal manager which will contact you with prepared specially for you
-							offer. The assigned personal manager is always available for you and happy to help you with
-							all your questions.
-						</div>
-					</div>
-
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>03 Agreement Formalities</p>
-							The next step involves formalizing our partnership through a service agreement. This
-							contract can be signed remotely or at our head office in Warsaw, based on your convenience.
-						</div>
-					</div>
-
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>04 Access Details and User Guide</p>
-							We will set up your exclusive organizer account in our Relivent system following the
-							contract. You will receive all necessary login details, along with a detailed guide on how
-							to use the system. This guide will enable you to independently manage events, review sales
-							statistics, and analyze various metrics.
-						</div>
-					</div>
-
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>05 Event Creation</p>
-							With your account ready, we will assist you in adding your first event to our platform. Your
-							personal manager will provide constant support during this process, helping with any
-							questions or issues that may arise.
-						</div>
-					</div>
-
-					<div>
-						<div class="slick_mobile_wrap">
-							<p>06 Start Selling</p>
-							Now you're all set to begin the ticket sales process. Our system ensures a smooth ticketing
-							experience for you and your clients while providing comprehensive analytics to keep track of
-							your performance. Enjoy the convenience of selling tickets and watching your events succeed.
-						</div>
-					</div>
-				</div>
-
-				<div class="tab">
-					<div class="tab-header">
-						<div class="active"><i class="fa fa-code"></i> 01 Complete the Form</div>
-						<div><i class="fa fa-pencil-square"></i> 02 Meet your personal manаger</div>
-						<div><i class="fa fa-bar-chart"></i> 03 Agreement Formalities</div>
-						<div><i class="fa fa-envelope"></i> 04 Access Details and User Guide</div>
-
-						<div><i class="fa fa-envelope"></i> 05 Event Creation</div>
-
-						<div><i class="fa fa-envelope"></i> 06 Start Selling</div>
-					</div>
-					<div class="tab-indicator"></div>
-					<div class="tab-content2">
-						<div class="active">
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									Begin the process by providing basic information about yourself via a brief form.
-									This will enable us to create a personalized offer that meets your unique needs.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/1.png" alt="" />
-								</span>
-							</span>
-						</div>
-
-						<div>
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									We are assigning you personal manager which will contact you with prepared specially
-									for you offer.The assigned personal manager is always available for you and happy to
-									help you with all your questions.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/2.png" alt="" />
-								</span>
-							</span>
-						</div>
-
-						<div>
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									The next step involves formalizing our partnership through a service agreement. This
-									contract can be signed remotely or at our head office in Warsaw, based on your
-									convenience.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/3.png" alt="" />
-								</span>
-							</span>
-						</div>
-
-						<div>
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									We will set up your exclusive organizer account in our Relivent system following the
-									contract. You will receive all necessary login details, along with a detailed guide
-									on how to use the system. This guide will enable you to independently manage events,
-									review sales statistics, and analyze various metrics.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/4.png" alt="" />
-								</span>
-							</span>
-						</div>
-
-						<div>
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									We are assigning you personal manager which will contact you with prepared specially
-									for you offer.The assigned personal manager is always available for you and happy to
-									help you with all your questions.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/5.png" alt="" />
-								</span>
-							</span>
-						</div>
-
-						<div>
-							<span class="acc__wrap flex">
-								<span class="acc__block">
-									With your account ready, we will assist you in adding your first event to our
-									platform. Your personal manager will provide constant support during this process,
-									helping with any questions or issues that may arise.
-								</span>
-
-								<span class="acc__block2">
-									<img src="images/acc-img6.svg" alt="" />
-								</span>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="rel" id="onePgaeNav">
-			<div class="container">
-				<div class="rel__title">Relivent tickets sales systems</div>
-				<div class="rel__body">
-					Leave an application and we will tell you about all the features of our platform
-				</div>
-
-				<div class="rel__item">
-					With our easy-to-use platform and <br />
-					experienced team, you can focus on what you <br />
-					do best - creating an unforgettable concert<br />
-					experience.
-				</div>
-
-				<a href="#footer" class="scroll get_it flex items_center justify_center">GET IN TOUCH</a>
-			</div>
-		</section>
-
-		<section class="why">
-			<div class="container">
-				<h2>Why work with us</h2>
-				<div class="rel__body">
-					Our team takes care of each client, you can always get advice and solve the necessary problem.
-				</div>
-
-				<div class="flex flex_wrap why__wrap">
-					<div class="why__block_in">
-						<div class="why__block">
-							<div class="why__block_img"><img src="images/why-img.png" alt="" /></div>
-							<div class="why__block__title">
-								+10 years of experience in the <br />
-								entertainment industry
-							</div>
-						</div>
-					</div>
-
-					<div class="why__block_in">
-						<div class="why__block">
-							<div class="why__block_img"><img src="images/why-img2.png" alt="" /></div>
-							<div class="why__block__title">
-								Flexible system of cooperation <br />
-								for each client
-							</div>
-						</div>
-					</div>
-
-					<div class="why__block_in">
-						<div class="why__block">
-							<div class="why__block_img"><img src="images/why-img3.png" alt="" /></div>
-							<div class="why__block__title">
-								Transparent statistics on sales <br />
-								and user activity
-							</div>
-						</div>
-					</div>
-
-					<div class="why__block_in">
-						<div class="why__block">
-							<div class="why__block_img"><img src="images/why-img4.png" alt="" /></div>
-							<div class="why__block__title">
-								Every day the audience and <br />
-								regular users increase
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="advent">
-			<div class="container">
-				<h2>Advantage our system</h2>
-				<div class="rel__body advent__body">
-					Our team takes care of each client, you can always get advice and solve the necessary problem.
-				</div>
-
-				<div class="advent__main">
-					<div class="advent__wrap flex justify_center flex_wrap">
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img.svg" alt="" /> <span>Multilingual Service</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img2.svg" alt="" /> <span>Efficient Ticketing</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img3.svg" alt="" /> <span>Dedicated Support</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img4.svg" alt="" /> <span>Sophisticated Administration</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img5.svg" alt="" /> <span>Promotional Opportunities</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img6.svg" alt="" /> <span>In-Depth Analytics</span>
-						</div>
-
-						<div class="advent__block flex items_center">
-							<img src="images/advent-img7.svg" alt="" /> <span>Minimal Preliminaries</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="partners" id="easy">
-			<h2>Partners</h2>
-			<div class="rel__body partners__body">
-				Our team takes care of each client, you can always get advice and solve the necessary problem.
-			</div>
-			<div class="slider responsive">
-				<div>
-					<div class="partner__wrap">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap2">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap3">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap4">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap5">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap6">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap7">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="partner__wrap8">
-						<div class="partner__title">Tonikevents</div>
-
-						<div class="partner__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="mail-section">
-			<div class="container">
-				<h2>We are open for partnership</h2>
-				<div class="rel__body">
-					We are excited about the opportunity to work with you and bring your event to the next level. Please
-					do not hesitate to contact us if you have any questions or would like to discuss further.
-				</div>
-
-				<div class="tabs__buttons--container">
-					<button class="tabs__tab-btn" data-tab-id="home">Consultation</button>
-					<button class="tabs__tab-btn" data-tab-id="about">Application</button>
-				</div>
-
-				<form data-tab="home" class="tabs__tab" method="post" action="#" data-ajax>
-					<div class="st_wrap flex">
-						<div class="form">
-							<div class="field">
-								<div class="label__title label__title2">Code country</div>
-
-								<div class="label__title label__title3">Phone Number:</div>
-								<input
-									type="text"
-									class="phone-country tel"
-									name="phone"
-									autofocus="true"
-									placeholder="Phone Number"
-									data-required="parent: .country-phone" />
-							</div>
-						</div>
-					</div>
-					<div class="input__wrap">
-						<div class="label__title">Email:</div>
-						<input type="email" placeholder="Email address" data-required="email" />
-					</div>
-					<button class="btn__get" type="submit">
-						<span>GET IN TOUCH</span>
-						<img src="images/arrow-circle-right.svg" alt="" />
-					</button>
-
-					<div class="get__title">By sending this message you automatically agree to the privacy policy</div>
-				</form>
-
-				<form data-tab="about" class="tabs__tab" action="#" method="post" data-ajax>
-					<div class="st_wrap flex">
-						<div class="form">
-							<div class="field">
-								<div class="label__title label__title2">Code country</div>
-
-								<div class="label__title label__title3">Phone Number:</div>
-								<input
-									type="text"
-									class="phone-country tel"
-									name="phone"
-									autofocus="true"
-									placeholder="Phone Number"
-									data-required="parent: .country-phone" />
-							</div>
-						</div>
-					</div>
-					<div class="input__wrap">
-						<div class="label__title">Email:</div>
-						<input type="email" placeholder="Email address" data-required="email" />
-					</div>
-
-					<div class="custom-select" data-required="select">
-						<p>Type of company:</p>
-						<select name="box-1" id="">
-							<option value="0">Choose a type</option>
-							<option value="1">Organizer</option>
-							<option value="3">Venue</option>
-							<option value="4">Advertiser</option>
-							<option value="4">Concert agency</option>
-						</select>
-					</div>
-
-					<div class="custom-select" data-required="select">
-						<p>Average attendance:</p>
-						<select name="box-1" id="">
-							<option value="0">Choose number of events</option>
-							<option value="1">Up to 200</option>
-							<option value="3">200-1000</option>
-							<option value="4">1000-5000</option>
-							<option value="4">More 5000</option>
-						</select>
-					</div>
-
-					<div class="custom-select" data-required="select">
-						<p>Average number of events per month</p>
-						<select name="box-1" id="">
-							<option value="0">Choose number of events</option>
-							<option value="1">Up to 5</option>
-							<option value="3">5-20</option>
-							<option value="4">20-100</option>
-							<option value="4">More 100</option>
-						</select>
-					</div>
-					<button class="btn__get" type="submit">
-						<span>GET IN TOUCH</span>
-						<img src="images/arrow-circle-right.svg" alt="" />
-					</button>
-					<div class="get__title">By sending this message you automatically agree to the privacy policy</div>
-				</form>
-			</div>
-		</section>
-
-		<footer id="footer">
-			<div class="container">
-				<div class="ft__wrap flex">
-					<div class="ft__block">
-						<div class="ft__title">Partner + Relivent</div>
-						<div class="ft__body">
-							There are many variations of passages of Lorem Ipsum available, but the majority have
-							suffered alteration in some form, by injected humour, or randomised words which don't look
-							even slightly believable.
-						</div>
-
-						<ul class="menu__bottom">
-							<li><a href="#">About ticket system</a></li>
-							<li><a href="#">Become Partner</a></li>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Go to Relivent.com</a></li>
-						</ul>
-
-						<div class="copyright">© 2005-2022 relivent.Media Services LLC</div>
-					</div>
-
-					<div class="ft__block2">
-						<div class="contact__title">Contacts</div>
-
-						<a href="tel:+48222662664" class="footer__button"
+						<a href="tel:+48222662664" class="footer__right_button phone"
 							><img src="images/phone-ico.svg" /><span>+48 222 662 664</span></a
 						>
 
-						<a href="mailto:partners@relivent.eu" class="footer__button mail"
+						<a href="mailto:partners@relivent.eu" class="footer__right_button sms"
 							><img src="images/sms-ico.svg" /><span>partners@relivent.eu</span></a
 						>
 
-						<a href="mailto:partners@relivent.eu" class="footer__button address">
+						<a href="mailto:partners@relivent.eu" class="footer__right_button location">
 							<img src="images/location.svg" /><span>Puławska 2, 02-566 Warszawa, Польша</span>
 						</a>
-
-						<div class="contact__title follow">Follow us</div>
-
-						<ul class="social_bottom flex">
-							<li>
-								<a href="#"><img src="images/sb.svg" alt="" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="images/sb2.svg" alt="" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="images/sb3.svg" alt="" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="images/sb4.svg" alt="" /></a>
-							</li>
-							<li>
-								<a href="#"><img src="images/sb5.svg" alt="" /></a>
-							</li>
-						</ul>
-
-						<div class="footer-link-privacy flex">
-							<a href="#" class="footer-link-privacy__item">Privacy</a>
-							<a href="#" class="footer-link-privacy__item">Help center</a>
-						</div>
-
-						<div class="copyright copyright__768">© 2005-2022 relivent.Media Services LLC</div>
 					</div>
 				</div>
+			</nav>
+			<div class="burger">
+				<i><img src="images/burger.svg" alt="" /> </i>
+				<i>
+					<img src="images/burger-close.svg" alt="" />
+				</i>
 			</div>
-		</footer>
+			<header>
+				<div class="container">
+					<div class="head__top flex items_center between">
+						<div class="head__inner flex items_center">
+							<div class="logo">
+								<a href="index.html" title=""><img src="images/logo.svg" alt="" /></a>
+							</div>
+							<ul class="menu__top flex" id="onePgaeNav">
+								<li class="header__item">
+									<a href="#main" class="scroll item-visible">About ticket system</a>
+									<a href="#main" class="scroll item-hidden">About ticket system</a>
+								</li>
+								<li class="header__item">
+									<a href="#about" class="scroll item-visible">How to start</a>
+									<a href="#about" class="scroll item-hidden">How to start</a>
+								</li>
+								<li class="header__item">
+									<a href="#easy" class="scroll item-visible">Become Partner</a>
+									<a href="#easy" class="scroll item-hidden">Become Partner</a>
+								</li>
+							</ul>
+						</div>
+						<div class="head__inner flex items_center">
+							<select id="mounth">
+								<option value="hide">Español</option>
+								<option value="january">Español</option>
+								<option value="february">English</option>
+							</select>
+
+							<a href="#" class="consultation flex items_center"
+								>Consultation <img src="images/icon-consul.svg" alt=""
+							/></a>
+						</div>
+					</div>
+
+					<div class="head__slogan">Relivent tickets sales systems</div>
+					<h1 class="head__slogan2">
+						Start selling tickets easily, collect statistics and optimize right in your account.
+					</h1>
+					<div class="head__block__main">
+						<div class="flex flex_wrap head__block_wrap">
+							<div class="head__block_in">
+								<div class="head__block">
+									<svg
+										class="_24-support__group"
+										width="25"
+										height="24"
+										viewBox="0 0 25 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M18.5 2H6.5C4.84 2 3.5 3.33 3.5 4.97V15.88C3.5 17.52 4.84 18.85 6.5 18.85H7.26C8.06 18.85 8.82 19.16 9.38 19.72L11.09 21.41C11.87 22.18 13.14 22.18 13.92 21.41L15.63 19.72C16.19 19.16 16.96 18.85 17.75 18.85H18.5C20.16 18.85 21.5 17.52 21.5 15.88V4.97C21.5 3.33 20.16 2 18.5 2ZM10.88 13.01C11.29 13.01 11.63 13.35 11.63 13.76C11.63 14.17 11.29 14.51 10.88 14.51H8.2C7.76 14.51 7.35 14.3 7.09 13.94C6.84 13.6 6.78 13.18 6.9 12.78C7.25 11.71 8.11 11.13 8.87 10.61C9.67 10.07 10.12 9.73 10.12 9.15C10.12 8.63 9.7 8.21 9.18 8.21C8.66 8.21 8.25 8.64 8.25 9.16C8.25 9.57 7.91 9.91 7.5 9.91C7.09 9.91 6.75 9.57 6.75 9.16C6.75 7.82 7.84 6.72 9.19 6.72C10.54 6.72 11.63 7.81 11.63 9.16C11.63 10.57 10.57 11.29 9.72 11.87C9.19 12.23 8.69 12.57 8.44 13.02H10.88V13.01ZM17.5 13.08H17.29V13.77C17.29 14.18 16.95 14.52 16.54 14.52C16.13 14.52 15.79 14.18 15.79 13.77V13.08H13.83C13.83 13.08 13.83 13.08 13.82 13.08C13.33 13.08 12.88 12.82 12.63 12.4C12.38 11.97 12.38 11.44 12.63 11.02C13.31 9.85 14.1 8.52 14.82 7.36C15.14 6.85 15.75 6.62 16.32 6.78C16.89 6.95 17.29 7.47 17.28 8.07V11.59H17.5C17.91 11.59 18.25 11.93 18.25 12.34C18.25 12.75 17.91 13.08 17.5 13.08Z"
+											fill="white" />
+										<path
+											d="M15.7891 11.5799V8.63989C15.1991 9.59989 14.5891 10.6299 14.0391 11.5699H15.7891V11.5799Z"
+											fill="white" />
+									</svg>
+
+									<div class="head__block__title">24/7 support</div>
+								</div>
+							</div>
+
+							<div class="head__block_in">
+								<div class="head__block">
+									<svg
+										class="vuesax-bold-tag-user__tag-user"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M18 2H6C4.34 2 3 3.33 3 4.97V15.88C3 17.52 4.34 18.86 6 18.86H6.76C7.55 18.86 8.32 19.17 8.88 19.73L10.59 21.42C11.37 22.19 12.63 22.19 13.41 21.42L15.12 19.73C15.68 19.17 16.45 18.86 17.24 18.86H18C19.66 18.86 21 17.52 21 15.88V4.97C21 3.33 19.66 2 18 2ZM12 5.55C13.08 5.55 13.95 6.43 13.95 7.5C13.95 8.56 13.11 9.41 12.07 9.45C12.03 9.45 11.97 9.45 11.92 9.45C10.87 9.41 10.04 8.56 10.04 7.5C10.05 6.43 10.92 5.55 12 5.55ZM14.75 14.69C13.24 15.7 10.76 15.7 9.25 14.69C7.92 13.81 7.92 12.35 9.25 11.46C10.77 10.45 13.25 10.45 14.75 11.46C16.08 12.35 16.08 13.8 14.75 14.69Z"
+											fill="white" />
+									</svg>
+
+									<div class="head__block__title">Personal manager</div>
+								</div>
+							</div>
+
+							<div class="head__block_in">
+								<div class="head__block">
+									<svg
+										class="vuesax-bold-folder-cloud__folder-cloud"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M15.5786 19.7C13.4686 19.85 13.4686 22.91 15.5786 23.06H20.5886C21.1986 23.06 21.7786 22.84 22.2286 22.43C23.7086 21.14 22.9186 18.54 20.9686 18.3C20.2686 14.08 14.1586 15.68 15.6086 19.7"
+											fill="white" />
+										<path
+											d="M15.5786 19.7C13.4686 19.85 13.4686 22.91 15.5786 23.06H20.5886C21.1986 23.06 21.7786 22.84 22.2286 22.43C23.7086 21.14 22.9186 18.54 20.9686 18.3C20.2686 14.08 14.1586 15.68 15.6086 19.7"
+											fill="white" />
+										<path
+											d="M22 11.07V15.34C22 15.66 21.49 15.8 21.27 15.57C20.8 15.08 20.21 14.71 19.53 14.5C17.96 14.01 16.15 14.49 15.01 15.67C14.29 16.44 13.9 17.4 13.88 18.44C13.88 18.62 13.79 18.78 13.65 18.89C12.93 19.46 12.49 20.35 12.49 21.37V21.38C12.49 21.7 12.26 21.99 11.94 21.99H7.34C4.4 22 2 19.6 2 16.65V6.42C2 3.98 3.98 2 6.42 2H8.74C10.37 2 10.88 2.53 11.53 3.4L12.93 5.26C13.24 5.67 13.28 5.72 13.86 5.72H16.65C19.03 5.72 21.05 7.28 21.74 9.44C21.89 9.89 21.97 10.35 21.99 10.84C22 10.91 22 11 22 11.07Z"
+											fill="white" />
+									</svg>
+
+									<div class="head__block__title">In-house CRM system</div>
+								</div>
+							</div>
+
+							<div class="head__block_in">
+								<div class="head__block">
+									<svg
+										class="vuesax-bold-discount-shape__group"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M21.5289 10.8699L20.0089 9.34988C19.7489 9.08988 19.5389 8.57988 19.5389 8.21988V6.05988C19.5389 5.17988 18.8189 4.45988 17.9389 4.45988H15.7889C15.4289 4.45988 14.9189 4.24988 14.6589 3.98988L13.1389 2.46988C12.5189 1.84988 11.4989 1.84988 10.8789 2.46988L9.33891 3.98988C9.08891 4.24988 8.57891 4.45988 8.20891 4.45988H6.05891C5.17891 4.45988 4.45891 5.17988 4.45891 6.05988V8.20988C4.45891 8.56988 4.24891 9.07988 3.98891 9.33988L2.46891 10.8599C1.84891 11.4799 1.84891 12.4999 2.46891 13.1199L3.98891 14.6399C4.24891 14.8999 4.45891 15.4099 4.45891 15.7699V17.9199C4.45891 18.7999 5.17891 19.5199 6.05891 19.5199H8.20891C8.56891 19.5199 9.07891 19.7299 9.33891 19.9899L10.8589 21.5099C11.4789 22.1299 12.4989 22.1299 13.1189 21.5099L14.6389 19.9899C14.8989 19.7299 15.4089 19.5199 15.7689 19.5199H17.9189C18.7989 19.5199 19.5189 18.7999 19.5189 17.9199V15.7699C19.5189 15.4099 19.7289 14.8999 19.9889 14.6399L21.5089 13.1199C22.1589 12.5099 22.1589 11.4899 21.5289 10.8699ZM7.99891 8.99988C7.99891 8.44988 8.44891 7.99988 8.99891 7.99988C9.54891 7.99988 9.99891 8.44988 9.99891 8.99988C9.99891 9.54988 9.55891 9.99988 8.99891 9.99988C8.44891 9.99988 7.99891 9.54988 7.99891 8.99988ZM9.52891 15.5299C9.37891 15.6799 9.18891 15.7499 8.99891 15.7499C8.80891 15.7499 8.61891 15.6799 8.46891 15.5299C8.17891 15.2399 8.17891 14.7599 8.46891 14.4699L14.4689 8.46988C14.7589 8.17988 15.2389 8.17988 15.5289 8.46988C15.8189 8.75988 15.8189 9.23988 15.5289 9.52988L9.52891 15.5299ZM14.9989 15.9999C14.4389 15.9999 13.9889 15.5499 13.9889 14.9999C13.9889 14.4499 14.4389 13.9999 14.9889 13.9999C15.5389 13.9999 15.9889 14.4499 15.9889 14.9999C15.9889 15.5499 15.5489 15.9999 14.9989 15.9999Z"
+											fill="white" />
+									</svg>
+
+									<div class="head__block__title">Flexible terms of 8%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="scroll_down" id="onePgaeNav">
+						<a class="scroll" href="#collect"><img src="images/scroll-down.svg" alt="" /></a>
+					</div>
+				</div>
+			</header>
+
+			<section class="collect" id="collect">
+				<div class="container">
+					<h2>Collect statistics and control sales</h2>
+					<div class="tabs__wrap">
+						<ul class="tabs">
+							<li class="tab-link current" data-tab="tab-1">Data protection</li>
+							<li class="tab-link" data-tab="tab-2">Order history</li>
+							<li class="tab-link" data-tab="tab-3">Sales statistics</li>
+							<li class="tab-link" data-tab="tab-4">Financial reports</li>
+
+							<li class="tab-link" data-tab="tab-5">Reports on attendance</li>
+						</ul>
+					</div>
+
+					<div id="tab-1" class="tab-content current">
+						<div class="tabs__body">
+							Our ticket sales platform emphasizes protecting your personal information and financial
+							transactions. Your data is securely housed within our systems using state-of-the-art
+							encryption methods. Furthermore, we ensure that your payment card information is kept
+							confidential and that no unauthorized transactions occur. Trust us, your data isn't going
+							anywhere, and neither is your money.
+						</div>
+					</div>
+
+					<div id="tab-2" class="tab-content">
+						<div class="tabs__body">
+							Relivent prioritizes data protection using advanced encryption methods such as AES, RSA, and
+							SHA-3. AES secure data during data transfer , RSA assists in secure key exchange, while
+							SHA-3 ensures data integrity. We also use tokenization for credit/debit cards security and
+							comply with PCI DSS standards. Your data and money are well secured with us.
+						</div>
+					</div>
+
+					<div id="tab-3" class="tab-content">
+						<div class="tabs__body">
+							A convenient list of all your orders that displays all necessary information about the
+							purchase, advanced features of personal account allows you to analyze your orders within the
+							account. You can compare indicators, track trends and generate reports.
+						</div>
+					</div>
+
+					<div id="tab-4" class="tab-content">
+						<div class="tabs__body">
+							Collect statistics data directly in your personal account. As well you can download it, edit
+							and send. We generate reports on purchases, returns, visits and constantly expand the range
+							of data that will help you improve your approach to event promotion and marketing.
+						</div>
+					</div>
+
+					<div id="tab-5" class="tab-content">
+						<div class="tabs__body">
+							Download and edit financial reports using our tools inside your personal account. You have
+							full access to all parameters and you can track changes in real time, as well as you can
+							assign limited rights to your employees to analyze statistics when you don't have enough
+							time. You can receive a report by mail every day to manage your business online.
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="top-slider">
+				<div class="container">
+					<div class="top-slider__slider swiper">
+						<div class="top-slider__slider-wrapper swiper-wrapper">
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide.png" alt="slide" />
+								</div>
+							</div>
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide2.png" alt="slide" />
+								</div>
+							</div>
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide3.png" alt="slide" />
+								</div>
+							</div>
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide4.png" alt="slide" />
+								</div>
+							</div>
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide5.png" alt="slide" />
+								</div>
+							</div>
+							<div class="top-slider__slide swiper-slide">
+								<div class="top-slider__img">
+									<img src="images/slider/slide.png" alt="slide" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="about">
+				<div class="container">
+					<h2>Easy to start</h2>
+					<div class="rel__body">
+						Our team takes care of each client, you can always get advice and solve the necessary problem.
+					</div>
+
+					<div class="slider slick__mobile">
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>01 Complete the Form</p>
+								Begin the process by providing basic information about yourself via a brief form. This
+								will enable us to create a personalized offer that meets your unique needs.
+							</div>
+						</div>
+
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>02 Meet your personal manаger</p>
+								We are assigning you personal manager which will contact you with prepared specially for
+								you offer. The assigned personal manager is always available for you and happy to help
+								you with all your questions.
+							</div>
+						</div>
+
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>03 Agreement Formalities</p>
+								The next step involves formalizing our partnership through a service agreement. This
+								contract can be signed remotely or at our head office in Warsaw, based on your
+								convenience.
+							</div>
+						</div>
+
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>04 Access Details and User Guide</p>
+								We will set up your exclusive organizer account in our Relivent system following the
+								contract. You will receive all necessary login details, along with a detailed guide on
+								how to use the system. This guide will enable you to independently manage events, review
+								sales statistics, and analyze various metrics.
+							</div>
+						</div>
+
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>05 Event Creation</p>
+								With your account ready, we will assist you in adding your first event to our platform.
+								Your personal manager will provide constant support during this process, helping with
+								any questions or issues that may arise.
+							</div>
+						</div>
+
+						<div>
+							<div class="slick_mobile_wrap">
+								<p>06 Start Selling</p>
+								Now you're all set to begin the ticket sales process. Our system ensures a smooth
+								ticketing experience for you and your clients while providing comprehensive analytics to
+								keep track of your performance. Enjoy the convenience of selling tickets and watching
+								your events succeed.
+							</div>
+						</div>
+					</div>
+
+					<div class="tab">
+						<div class="tab-header">
+							<div class="active"><i class="fa fa-code"></i> 01 Complete the Form</div>
+							<div><i class="fa fa-pencil-square"></i> 02 Meet your personal manаger</div>
+							<div><i class="fa fa-bar-chart"></i> 03 Agreement Formalities</div>
+							<div><i class="fa fa-envelope"></i> 04 Access Details and User Guide</div>
+
+							<div><i class="fa fa-envelope"></i> 05 Event Creation</div>
+
+							<div><i class="fa fa-envelope"></i> 06 Start Selling</div>
+						</div>
+						<div class="tab-indicator"></div>
+						<div class="tab-content2">
+							<div class="active">
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										Begin the process by providing basic information about yourself via a brief
+										form. This will enable us to create a personalized offer that meets your unique
+										needs.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/1.png" alt="" />
+									</span>
+								</span>
+							</div>
+
+							<div>
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										We are assigning you personal manager which will contact you with prepared
+										specially for you offer.The assigned personal manager is always available for
+										you and happy to help you with all your questions.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/2.png" alt="" />
+									</span>
+								</span>
+							</div>
+
+							<div>
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										The next step involves formalizing our partnership through a service agreement.
+										This contract can be signed remotely or at our head office in Warsaw, based on
+										your convenience.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/3.png" alt="" />
+									</span>
+								</span>
+							</div>
+
+							<div>
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										We will set up your exclusive organizer account in our Relivent system following
+										the contract. You will receive all necessary login details, along with a
+										detailed guide on how to use the system. This guide will enable you to
+										independently manage events, review sales statistics, and analyze various
+										metrics.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/4.png" alt="" />
+									</span>
+								</span>
+							</div>
+
+							<div>
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										We are assigning you personal manager which will contact you with prepared
+										specially for you offer.The assigned personal manager is always available for
+										you and happy to help you with all your questions.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/5.png" alt="" />
+									</span>
+								</span>
+							</div>
+
+							<div>
+								<span class="acc__wrap flex">
+									<span class="acc__block">
+										With your account ready, we will assist you in adding your first event to our
+										platform. Your personal manager will provide constant support during this
+										process, helping with any questions or issues that may arise.
+									</span>
+
+									<span class="acc__block2">
+										<img src="images/acc-img6.svg" alt="" />
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="rel" id="onePgaeNav">
+				<div class="container">
+					<div class="rel__title">Relivent tickets sales systems</div>
+					<div class="rel__body">
+						Leave an application and we will tell you about all the features of our platform
+					</div>
+
+					<div class="rel__item">
+						With our easy-to-use platform and <br />
+						experienced team, you can focus on what you <br />
+						do best - creating an unforgettable concert<br />
+						experience.
+					</div>
+
+					<a href="#footer" class="scroll get_it flex items_center justify_center">GET IN TOUCH</a>
+				</div>
+			</section>
+
+			<section class="why">
+				<div class="container">
+					<h2>Why work with us</h2>
+					<div class="rel__body">
+						Our team takes care of each client, you can always get advice and solve the necessary problem.
+					</div>
+
+					<div class="flex flex_wrap why__wrap">
+						<div class="why__block_in">
+							<div class="why__block">
+								<div class="why__block_img"><img src="images/why-img.png" alt="" /></div>
+								<div class="why__block__title">
+									+10 years of experience in the <br />
+									entertainment industry
+								</div>
+							</div>
+						</div>
+
+						<div class="why__block_in">
+							<div class="why__block">
+								<div class="why__block_img"><img src="images/why-img2.png" alt="" /></div>
+								<div class="why__block__title">
+									Flexible system of cooperation <br />
+									for each client
+								</div>
+							</div>
+						</div>
+
+						<div class="why__block_in">
+							<div class="why__block">
+								<div class="why__block_img"><img src="images/why-img3.png" alt="" /></div>
+								<div class="why__block__title">
+									Transparent statistics on sales <br />
+									and user activity
+								</div>
+							</div>
+						</div>
+
+						<div class="why__block_in">
+							<div class="why__block">
+								<div class="why__block_img"><img src="images/why-img4.png" alt="" /></div>
+								<div class="why__block__title">
+									Every day the audience and <br />
+									regular users increase
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="advent">
+				<div class="container">
+					<h2>Advantage our system</h2>
+					<div class="rel__body advent__body">
+						Our team takes care of each client, you can always get advice and solve the necessary problem.
+					</div>
+
+					<div class="advent__main">
+						<div class="advent__wrap flex justify_center flex_wrap">
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img.svg" alt="" /> <span>Multilingual Service</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img2.svg" alt="" /> <span>Efficient Ticketing</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img3.svg" alt="" /> <span>Dedicated Support</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img4.svg" alt="" /> <span>Sophisticated Administration</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img5.svg" alt="" /> <span>Promotional Opportunities</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img6.svg" alt="" /> <span>In-Depth Analytics</span>
+							</div>
+
+							<div class="advent__block flex items_center">
+								<img src="images/advent-img7.svg" alt="" /> <span>Minimal Preliminaries</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="partners" id="easy">
+				<h2>Partners</h2>
+				<div class="rel__body partners__body">
+					Our team takes care of each client, you can always get advice and solve the necessary problem.
+				</div>
+				<div class="slider responsive">
+					<div>
+						<div class="partner__wrap">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap2">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap3">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap4">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap5">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap6">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap7">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="partner__wrap8">
+							<div class="partner__title">Tonikevents</div>
+
+							<div class="partner__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="mail-section">
+				<div class="container">
+					<h2>We are open for partnership</h2>
+					<div class="rel__body">
+						We are excited about the opportunity to work with you and bring your event to the next level.
+						Please do not hesitate to contact us if you have any questions or would like to discuss further.
+					</div>
+
+					<div class="tabs__buttons--container">
+						<button class="tabs__tab-btn" data-tab-id="home">Consultation</button>
+						<button class="tabs__tab-btn" data-tab-id="about">Application</button>
+					</div>
+
+					<form data-tab="home" class="tabs__tab" method="post" action="#" data-ajax>
+						<div class="st_wrap flex">
+							<div class="form">
+								<div class="field">
+									<div class="label__title label__title2">Code country</div>
+
+									<div class="label__title label__title3">Phone Number:</div>
+									<input
+										type="text"
+										class="phone-country tel"
+										name="phone"
+										autofocus="true"
+										placeholder="Phone Number"
+										data-required="parent: .country-phone" />
+								</div>
+							</div>
+						</div>
+						<div class="input__wrap">
+							<div class="label__title">Email:</div>
+							<input type="email" placeholder="Email address" data-required="email" />
+						</div>
+						<button class="btn__get" type="submit">
+							<span>GET IN TOUCH</span>
+							<img src="images/arrow-circle-right.svg" alt="" />
+						</button>
+
+						<div class="get__title">
+							By sending this message you automatically agree to the privacy policy
+						</div>
+					</form>
+
+					<form data-tab="about" class="tabs__tab" action="#" method="post" data-ajax>
+						<div class="st_wrap flex">
+							<div class="form">
+								<div class="field">
+									<div class="label__title label__title2">Code country</div>
+
+									<div class="label__title label__title3">Phone Number:</div>
+									<input
+										type="text"
+										class="phone-country tel"
+										name="phone"
+										autofocus="true"
+										placeholder="Phone Number"
+										data-required="parent: .country-phone" />
+								</div>
+							</div>
+						</div>
+						<div class="input__wrap">
+							<div class="label__title">Email:</div>
+							<input type="email" placeholder="Email address" data-required="email" />
+						</div>
+
+						<div class="custom-select" data-required="select">
+							<p>Type of company:</p>
+							<select name="box-1" id="">
+								<option value="0">Choose a type</option>
+								<option value="1">Organizer</option>
+								<option value="3">Venue</option>
+								<option value="4">Advertiser</option>
+								<option value="4">Concert agency</option>
+							</select>
+						</div>
+
+						<div class="custom-select" data-required="select">
+							<p>Average attendance:</p>
+							<select name="box-1" id="">
+								<option value="0">Choose number of events</option>
+								<option value="1">Up to 200</option>
+								<option value="3">200-1000</option>
+								<option value="4">1000-5000</option>
+								<option value="4">More 5000</option>
+							</select>
+						</div>
+
+						<div class="custom-select" data-required="select">
+							<p>Average number of events per month</p>
+							<select name="box-1" id="">
+								<option value="0">Choose number of events</option>
+								<option value="1">Up to 5</option>
+								<option value="3">5-20</option>
+								<option value="4">20-100</option>
+								<option value="4">More 100</option>
+							</select>
+						</div>
+						<button class="btn__get" type="submit">
+							<span>GET IN TOUCH</span>
+							<img src="images/arrow-circle-right.svg" alt="" />
+						</button>
+						<div class="get__title">
+							By sending this message you automatically agree to the privacy policy
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<footer id="footer">
+				<div class="container">
+					<div class="ft__wrap flex">
+						<div class="ft__block">
+							<div class="ft__title">Partner + Relivent</div>
+							<div class="ft__body">
+								There are many variations of passages of Lorem Ipsum available, but the majority have
+								suffered alteration in some form, by injected humour, or randomised words which don't
+								look even slightly believable.
+							</div>
+
+							<ul class="menu__bottom">
+								<li><a href="#">About ticket system</a></li>
+								<li><a href="#">Become Partner</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Go to Relivent.com</a></li>
+							</ul>
+
+							<div class="copyright">© 2005-2022 relivent.Media Services LLC</div>
+						</div>
+
+						<div class="ft__block2">
+							<div class="contact__title">Contacts</div>
+
+							<a href="tel:+48222662664" class="footer__button"
+								><img src="images/phone-ico.svg" /><span>+48 222 662 664</span></a
+							>
+
+							<a href="mailto:partners@relivent.eu" class="footer__button mail"
+								><img src="images/sms-ico.svg" /><span>partners@relivent.eu</span></a
+							>
+
+							<a href="mailto:partners@relivent.eu" class="footer__button address">
+								<img src="images/location.svg" /><span>Puławska 2, 02-566 Warszawa, Польша</span>
+							</a>
+
+							<div class="contact__title follow">Follow us</div>
+
+							<ul class="social_bottom flex">
+								<li>
+									<a href="#"><img src="images/sb.svg" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/sb2.svg" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/sb3.svg" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/sb4.svg" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/sb5.svg" alt="" /></a>
+								</li>
+							</ul>
+
+							<div class="footer-link-privacy flex">
+								<a href="#" class="footer-link-privacy__item">Privacy</a>
+								<a href="#" class="footer-link-privacy__item">Help center</a>
+							</div>
+
+							<div class="copyright copyright__768">© 2005-2022 relivent.Media Services LLC</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://unpkg.com/imask"></script>
@@ -846,6 +861,7 @@
 			});
 		</script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="js/slider.js"></script>
 		<script src="js/forms.js"></script>
 		<script src="slick/slick.min.js"></script>
